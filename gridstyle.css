@@ -1,0 +1,56 @@
+.container_grid{
+    height: 500px;
+    border: 1px solid red;
+    display: grid;
+    grid-template: 10% auto/ 10% auto auto;
+    grid-template-areas:
+    "um tres tres"
+    "um dois dois"
+    ;
+    grid-gap: 1px;
+}
+.container_grid div{
+    background-color: gray;
+}
+.container_grid div:nth-child(1){
+    background-color: red;
+    grid-area: um;
+}
+
+.container_grid div:nth-child(2){
+    background-color: green;
+    grid-area:dois;
+}
+.container_grid div:nth-child(3){
+    background-color: yellow;
+    grid-area:tres;
+}
+
+/*grid-template* > define a quantidade e os tamanhos das linhas e colunas no grid
+    ex: grid-template: 30% auto / 50% auto auto;
+        > duas linhas, uma ocupando 30% do espaço e a outra ira se adaptar para o restante do espaço, nesse caso 70%. 
+        > tres colunas, uma ocupando 50% e as outras duas se adaptando de acondo com o espaço restante, nesse caso 25% pra cada uma das colunas
+*/
+/*grid-template-areas > defines as areas de linhas e colunas, onde serao colocados os griditems de acordo com seu nome de area
+    ex: grid-templete-areas: 
+                        "um um"
+                        "doi dois";
+        > tem-se duas linhas e duas colunas, onde a primeira linha é ocupada pelo griditem "um" e as primeira e segunda coluna é ocupada pelo grid utem "um". na segunda linha o griditem "dois" ocupa a segunda linha e as duas colunas
+*/
+/*grid-area > define onde o griditem vai se posicionar no grid, por meio ed grid areas ou especificando as linhas, colunas iniciais e finais
+    ex(por grid areas): item_um{
+                                grid-area: um
+                        }   
+                        item_dois{
+                                grid-area: dois
+                        }   
+    > tem-se a definicao dos nomes de areas dos griditems, assim os griditems sao linkados a area estabelecida do grid-templete-areas, definindo a suas ocupacoes ni grid
+*/
+/*grid-gap > define o epaço entre as linhas e colunas
+    ex: grid-gap: 10px 20px;
+    >tem-se um espaçamento de 10px entre as linhas do gride e 20px de espaçamento entre as colunas do grid 
+*/
+/*grid-auto-columns ou grid-auto-rows > define um tamanho padrao pra linhas ou colunas do grid
+    ex: grid-auto-row: 100px;
+        grid-auto-columns
+*/

@@ -1,0 +1,541 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+    list-style: none;
+}
+body{
+    background-color: #050E28;
+} /*header*/
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 8vh;
+    padding: 15px;
+    background-color: #04081c80;
+    
+}
+header > a{
+    flex-grow: .13;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header div{
+    flex-grow: .20;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+header div a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    flex-grow: 1;
+}
+header div a:last-child{
+    background-color: #BA81F6;
+    border-radius: 100px;
+}
+/*main*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+}
+/*banner princiapal*/
+main section#banner_principal{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 92vh;
+    background-image: linear-gradient(transparent, #03081b 95%);
+    /*linear gradiant com definicao do inicio do gradiante, ao colocar um porcentagem depois da cor do gradiant, o gradiant so ira se iniciar quando ele chegar a porcentagem definida relacionada ao tamanho do elemeto que vai receber o gradiant. se um elemento tem 100px, a o gradiant se inicia aos 30%, siginifica que o graduante iniciara a partir dos 30px do elemento, indepedente da direcao */
+}
+main section#banner_principal div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px 0 0 0;
+    border-bottom: 2px solid #A06A95;
+}
+main section#banner_principal div:nth-child(1) span{
+    font-size: 2rem;
+}
+main section#banner_principal div:nth-child(1) span:last-child{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+main section#banner_principal div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+main section#banner_principal div:nth-child(2) span:nth-child(1){
+    font-size: 1rem;
+    font-weight: bold;
+}
+main section#banner_principal div:nth-child(2) span:nth-child(2){
+    font-size: 2rem;
+    font-weight: bold;
+}
+main section#banner_principal div:nth-child(2) a{
+    background-color: #BA81F6;
+    height: 50px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 100px;
+    border: 2px solid #BA81F6;
+    margin-bottom: 70px;
+    transition: background-color .3s linear; /* defino que nesse elemento html, quando houver a mudança de valor na propriedade background-color, a trasicao dessa mudança sera de .7 segundos, a curva de velocidade sera linear, e o delay(atraso para a transicao) sera de 1 1 segundo*/
+    /*transition-timing-function: linear;
+        transition-timinh-function define como sera a velocidade da trancisao: 
+            linear > toda a atrancisao sera em velocidade linear, inicio meio e fim iguais
+            ease> valor padrao, a transisao tera seu inicio lent, meio rapido e fim lento, lento rapido lento
+            ease-in> velocidade de transocao lenta somente no inicio
+            ease-out> velocidade de transicao lenta somente no final
+            ease-in-out> velocidade lenta no inicio e no final */
+        /*transition-delay: 0;
+            transition-delay define o atraso para que ocorra a transicao, nesse caso tera o delay ou atraso de 0 (padrao) segundos para a transicao iniciar*/
+}
+main section#banner_principal div:nth-child(2) a:hover{
+    background-color: transparent;
+}
+/*bacground banner*/
+section#banner_principal #background_banner{
+    z-index: -1;
+    width: 100%;
+    position: absolute;
+}
+section#banner_principal #background_banner video{
+    width: 100%;
+}
+/*planos precos*/
+main section#planos_precos{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 80%;
+}
+/*div de texto inicial*/
+main section#planos_precos > div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    font-size: 1.7rem;
+    text-align: center;
+}
+main section#planos_precos > div:nth-child(1) div:nth-of-type(1){
+    background-color: #54264C;
+    width: 500px;
+    height: 50px;
+    margin: 30px 0 10px 0;
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+}
+main section#planos_precos > div:nth-child(1) div:nth-of-type(1) span{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+main section#planos_precos > div:nth-child(1) div:nth-of-type(1) :first-child{
+    color: black;
+    background-color: white;
+    border-radius: 100px;
+}
+
+main section#planos_precos > div:nth-child(1) div:nth-of-type(2){
+    width: 500px;
+    font-size: .9rem;
+    display: flex;
+    justify-content: flex-end;
+}
+main section#planos_precos div:nth-child(1) div:nth-of-type(2) span{
+    width: 160px;
+    text-align: end;
+}
+/*div das plataformas*/
+main section#planos_precos > div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    gap: 6%;
+}
+/*card mobile*/
+main section#planos_precos > div:nth-child(2) >  div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 30px 30px 0 30px;
+    border-radius: 10px;
+    background-image: linear-gradient(30deg, #040E28, #3E355D);
+}
+main section#planos_precos #plataformas #plano_mobile div:nth-child(1) > :first-child::after{
+    content: url(icones/mobile2.svg)
+    url(icones/mobile1.svg);
+    content: url(icones/mobile2.svg)
+    url(icones/mobile1.svg);
+}
+/*card multitelas*/
+main section#planos_precos > div:nth-child(2) >  div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 30px 30px 0 30px;
+    border-radius: 10px;
+    background-image: linear-gradient(-30deg, #040E28, #3E355D);
+}
+main section#planos_precos #plataformas #plano_multitelas div:nth-child(1) > :first-child::after{
+    content: url(icones/mobile2.svg)
+    url(icones/mobile1.svg);
+    content: url(icones/mobile2.svg)
+    url(icones/mobile1.svg)
+    url(icones/pc2.svg)
+    url(icones/pc1.svg);
+}
+main section#planos_precos #plataformas #plano_multitelas div > :first-child{
+    display: flex;
+    flex-direction: column;
+}
+/*mobile e multitelas*/
+main section#planos_precos #plataformas #plano_mobile div, #plano_multitelas div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30%;
+
+}
+main section#planos_precos #plataformas #plano_mobile > span, #plano_multitelas  > span{
+    font-size: 1.2rem;
+
+}
+main section#planos_precos #plataformas #plano_mobile div:nth-child(1) > :first-child, #plano_multitelas div:nth-child(1) > :first-child{
+    gap: 5px;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+main section#planos_precos #plataformas #plano_mobile div:nth-child(1) :last-child, #plano_multitelas div:nth-child(1) :last-child{
+    font-size: 1.6rem;
+}
+main section#planos_precos #plataformas #plano_mobile div :last-child strong, #plano_multitelas div :last-child strong{
+    color: #F37DE4;
+}
+main section#planos_precos #plataformas #plano_mobile div:last-child a, #plano_multitelas div:last-child a{
+    background-color: #9E79EB;
+    font-size: 1.3rem;
+    padding: 15px;
+    border-radius: 100px;
+    border: 2px solid #9E79EB;
+    transition: background-color .3s linear;
+}
+main section#planos_precos #plataformas #plano_mobile div a:hover, #plano_multitelas div a:hover{
+    background-color: #040E28; 
+    
+}
+
+/*section novidade*/
+main section#novidades{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.7rem;;
+}
+main section#novidades #slide_novidades{
+    display: flex;
+    gap: 15px;
+}
+main section#novidades #slide_novidades img{
+    width: 10%;
+    flex-grow: 1;
+    border-radius: 8px;
+    border: 1px solid #5b1ce6;
+}
+/*section conteudo gratuito*/
+main section#conteudo_gratuito{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+main section#conteudo_gratuito > :first-child{
+    display: grid;
+    grid-template: 150px 150px / 150px 150px 150px;
+
+    gap: 10px;
+
+}
+main section#conteudo_gratuito img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 1px solid #5b1ce6;
+    box-shadow: -20px -20px 50px 10px #0A1F48, 20px 20px 50px 10px #2C142F;
+    
+}
+main section#conteudo_gratuito > :last-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-basis: 35%;
+}
+main section#conteudo_gratuito > :last-child span{
+    font-size: 1.7rem;
+    text-align: center;
+}
+main section#conteudo_gratuito > :last-child a{
+    background-color: white;
+    color: black;
+    font-size: 1.4rem;
+    padding: 10px 30px;
+    border: 2px solid white;
+    border-radius: 100px;
+    transition: background-color .3s linear
+}
+main section#conteudo_gratuito > :last-child a:hover{
+    background-color: #050E28;
+    color: white;
+}
+/*section experiencia*/
+main section#experiencia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+main section#experiencia div:first-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.7rem;
+}
+main section#experiencia div:first-child span:last-child{
+    font-size: .9rem;
+}
+main section#experiencia div:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+main section#experiencia div:last-child span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width:17%;
+    text-align: center;
+    font-size: 1.3rem;
+} 
+main section#experiencia div:last-child span::before{
+    content: "";
+    width: 45px;
+    height: 2.5px;
+    background-color: #E872CE;
+    
+}
+/*pra familia*/
+main section#pra_familia{
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+    text-align: center;
+}
+/*marcas*/
+main section#marcas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+main section#marcas span{
+    font-size: 1.7rem;
+}
+main section#marcas > div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2E2754;
+    width: 80%;
+    padding: 50px;
+    gap: 20px;
+    border-radius: 10px;
+}
+main section#marcas > div:nth-child(2) div:first-child{
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+main section#marcas > div:nth-child(2) div:first-child img{
+    width:100px;
+}
+main section#marcas > div:nth-child(2) div:first-child::before{
+    content: url(icones/arrow_back_ios_black_24dp.svg);
+}
+main section#marcas > div:nth-child(2) div:first-child::after{
+    content: url(icones/arrow_forward_ios_black_24dp.svg);
+}
+main section#marcas > div:nth-child(2) div:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3C3164;
+    flex-wrap: wrap;
+    gap: 13px;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+main section#marcas > div:nth-child(2) div:last-child img{
+    width: 23%;
+    border-radius: 8px;
+}
+main section#marcas > div:nth-child(3){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+main section#marcas > div:nth-child(3) div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 60px;
+    padding: 30px;
+    border-radius: 100px;
+    background-color: #050E28;
+    border: 2px solid #5C509B;  
+    transition: background-color .3s, border .3s linear
+}
+main section#marcas > div:nth-child(3) div:hover{
+    background-color: #030513;
+    border: 2px solid #9E84FC; 
+
+}
+main section#marcas > div:nth-child(3) div img{
+    width: 70px;
+    height: 30px;
+}
+main section#marcas > div:nth-child(3) div:nth-child(3) img{
+    width: 50px;
+    height: 50px;
+    
+}
+main section#marcas > div:nth-child(3) div:nth-child(4) img{
+    width: 50px;
+    height: 50px;
+}
+main section#marcas > div:nth-child(3) div:nth-child(5) img{
+    width: 50px;
+    height: 50px;
+}
+main section#dispositivos{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    
+}
+main section#dispositivos > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main section#dispositivos > div:first-child span:first-child{
+        font-size: 1.7rem;
+}
+main section#dispositivos > div:first-child span:last-child{
+    font-size: .9rem;
+}
+main section#dispositivos > div:last-child{
+    display: flex;
+}
+main section#dispositivos > div:last-child div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+main section#dispositivos > div:last-child div img{
+    width: 55%;
+}
+main section#dispositivos > div:last-child div span:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.7rem;
+}
+main section#dispositivos > div:last-child div span:nth-child(2)::after{
+    content: "";
+    width: 70px;
+    height: 2.5px;
+    background-color: #F37DE4;
+    margin: 15px 0;
+}
+/*footer*/
+footer{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+}
+footer nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+}
+footer nav ul{
+    display: flex;
+    gap: 40px;
+}
+footer nav ul:last-child li a{
+    font-size: .8rem;
+    
+}
+footer nav ul li a:hover{
+    color: white;
+}
+footer nav ul:first-child li a, ul:last-child li a{
+    transition: color .3s linear;
+}
+footer nav ul li a, footer span{
+    color: #9e86ff;
+}
+footer > div:nth-child(3){
+    margin: 30px 0;
+    display: flex;
+    gap: 40px;
+}
